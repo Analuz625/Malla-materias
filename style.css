@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f0f4f8;
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.materia {
+  padding: 1rem;
+  border: none;
+  background-color: #ffffff;
+  border: 2px solid #4a90e2;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.materia:disabled {
+  background-color: #cccccc;
+  border-color: #999999;
+  cursor: not-allowed;
+}
+
+.materia.tachada {
+  text-decoration: line-through;
+  background-color: #a0e4a0;
+}
