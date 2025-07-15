@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Curricular</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Malla Curricular - Mi Carrera</h1>
+  <div id="malla" class="grid">
+    <!-- Ejemplo de materias -->
+    <button class="materia" data-id="1" data-correlativas="">Introducción</button>
+    <button class="materia" data-id="2" data-correlativas="1" disabled>Álgebra</button>
+    <button class="materia" data-id="3" data-correlativas="1" disabled>Programación</button>
+    <button class="materia" data-id="4" data-correlativas="2,3" disabled>Estructuras</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
