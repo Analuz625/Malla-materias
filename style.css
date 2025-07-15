@@ -1,36 +1,64 @@
 body {
-  font-family: sans-serif;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('https://www.xtrafondos.com/wallpapers/geometria-3d-3586.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
   text-align: center;
-  background: #f0f4f8;
   padding: 2rem;
 }
 
+/* Título */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
+}
+
+/* Grid fluido */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  max-width: 800px;
+  max-width: 1000px;
   margin: auto;
 }
 
+/* Botones de materias */
 .materia {
   padding: 1rem;
   border: none;
-  background-color: #ffffff;
-  border: 2px solid #4a90e2;
-  border-radius: 10px;
+  border-radius: 15px;
   font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: 0.3s;
+  backdrop-filter: blur(6px);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 2px solid #ffffff33;
 }
 
-.materia:disabled {
-  background-color: #cccccc;
-  border-color: #999999;
-  cursor: not-allowed;
+/* Al pasar el mouse */
+.materia:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
 }
 
+/* Materia completada */
 .materia.tachada {
   text-decoration: line-through;
-  background-color: #a0e4a0;
+  background-color: rgba(0, 255, 128, 0.3);
+  border-color: #00ff80;
+}
+
+/* Materia bloqueada */
+.materia:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
