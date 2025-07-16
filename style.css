@@ -1,14 +1,15 @@
 body {
-margin: 0;
+  margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('"C:\Users\pc\Downloads\geometria-3d_3840x2160_xtrafondos.com.jpg"') no-repeat center center fixed;
+  background-image: url('https://www.xtrafondos.com/wallpapers/geometria-3d-3586.jpg');
+  background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   color: #ffffff;
   text-align: center;
   padding: 2rem;
 }
 
-/* Título */
 h1 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -18,7 +19,6 @@ h1 {
   backdrop-filter: blur(4px);
 }
 
-/* Grid fluido */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -27,7 +27,6 @@ h1 {
   margin: auto;
 }
 
-/* Botones de materias */
 .materia {
   padding: 1rem;
   border: none;
@@ -42,20 +41,17 @@ h1 {
   border: 2px solid #ffffff33;
 }
 
-/* Al pasar el mouse */
 .materia:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.2);
   transform: scale(1.05);
 }
 
-/* Materia completada */
 .materia.tachada {
   text-decoration: line-through;
   background-color: rgba(0, 255, 128, 0.3);
   border-color: #00ff80;
 }
 
-/* Materia bloqueada */
 .materia:disabled {
   opacity: 0.4;
   cursor: not-allowed;
